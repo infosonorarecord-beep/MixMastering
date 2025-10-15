@@ -1,0 +1,89 @@
+src/App.tsx
+import React from "react";
+import HeroSection from "./HeroSection";
+
+const App: React.FC = () => {
+  return <HeroSection />;
+};
+
+export default App;
+src/HeroSection.tsximport React from "react";
+
+const HeroSection: React.FC = () => {
+  return (
+    <header style={styles.hero}>
+      <img src="/logo.png" alt="MixMastering Logo" style={styles.logo} />
+      <h1 style={styles.title}>🎧 MixMastering</h1>
+      <p style={styles.subtitle}>
+        Il tuo studio online per mixare e masterizzare tracce audio
+      </p>
+      <button style={styles.button}>Inizia ora</button>
+    </header>
+  );
+};
+
+const styles = {
+  hero: {
+    backgroundColor: "#1e1e1e",
+    color: "#fff",
+    textAlign: "center",
+    padding: "50px 20px",
+  },
+  logo: {
+    width: "100px",
+    height: "auto",
+  },
+  title: {
+    fontSize: "3rem",
+    margin: "20px 0",
+  },
+  subtitle: {
+    fontSize: "1.2rem",
+    marginBottom: "30px",
+  },
+  button: {
+    backgroundColor: "#6200ea",
+    color: "#fff",
+    border: "none",
+    padding: "10px 20px",
+    fontSize: "1rem",
+    cursor: "pointer",
+    borderRadius: "5px",
+  },
+};
+
+export default HeroSection;
+src/index.tsx import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+public/index.html<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MixMastering</title>
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MixMastering</title>
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
